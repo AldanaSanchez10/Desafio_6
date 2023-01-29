@@ -394,14 +394,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.024147796, y: -0.90826815, z: 0.036947515, w: 0.41605374}
-  m_LocalPosition: {x: 12.5, y: 2.02, z: 11.4}
+  m_LocalRotation: {x: 0.019933743, y: -0.9408079, z: 0.038513713, w: 0.33615476}
+  m_LocalPosition: {x: 8.73, y: 1.94, z: 15.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 5.003, y: -130.81, z: -0.755}
+  m_LocalEulerAnglesHint: {x: 4.926, y: -140.705, z: -0.668}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,7 +990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 2
-  rotationSpeed: 150
+  rotationSpeed: 0.15
 --- !u!136 &1967119963
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3474,4 +3474,4 @@ MonoBehaviour:
   enemyType: 1
   playerTransform: {fileID: 1967119966}
   rotationSpeed: 100
-  enemySpeed: 5
+  enemySpeed: 1

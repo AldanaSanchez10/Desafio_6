@@ -15,25 +15,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void movePlayer()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 movementDirection = new Vector3(horizontal, 0.0f, vertical);
-        movementDirection.Normalize();
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        transform.Translate(movementDirection * playerSpeed * Time.deltaTime);
+        transform.Translate(movement * playerSpeed * Time.deltaTime, Space.World);
 
-
-        //Player Rotation
-
-        if (movementDirection != Vector3.zero)
+        if (movement != Vector3.zero)
         {
-            Quaternion newRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
-
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, (rotationSpeed * Time.deltaTime));
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement.normalized), rotationSpeed);
         }
+
+
+
+
+
+
+
 
     }
 
-   
 }
